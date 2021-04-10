@@ -8,14 +8,14 @@ toc_title: RENAME
 ## RENAME DATABASE {#misc_operations-rename_database}
 Renames database, support only for Atomic database engine
 
-```
+```sql
 RENAME DATABASE atomic_database1 TO atomic_database2 [ON CLUSTER cluster]
 ```
 
 ## RENAME TABLE {#misc_operations-rename_table}
 Renames one or more tables.
 
-``` sql
+```sql
 RENAME TABLE [db11.]name11 TO [db12.]name12, [db21.]name21 TO [db22.]name22, ... [ON CLUSTER cluster]
 ```
 

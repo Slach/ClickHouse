@@ -3,19 +3,19 @@ toc_priority: 48
 toc_title: RENAME
 ---
 
-# RENAME Statement {#misc_operations-rename}
+# RENAME {#misc_operations-rename}
 
 ## RENAME DATABASE {#misc_operations-rename_database}
 Переименование базы данных
 
-```
+```sql
 RENAME DATABASE atomic_database1 TO atomic_database2 [ON CLUSTER cluster]
 ```
 
 ## RENAME TABLE {#misc_operations-rename_table}
 Переименовывает одну или несколько таблиц.
 
-``` sql
+```sql
 RENAME TABLE [db11.]name11 TO [db12.]name12, [db21.]name21 TO [db22.]name22, ... [ON CLUSTER cluster]
 ```
 
