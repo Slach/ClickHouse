@@ -135,6 +135,7 @@ Additional parameters that control the behavior of the `MergeTree` (optional):
 #### merge_with_ttl_timeout
 
 `merge_with_ttl_timeout` — Minimum delay in seconds before repeating a merge with delete TTL. Default value: `14400` seconds (4 hours).
+
 #### merge_with_recompression_ttl_timeout
 
 `merge_with_recompression_ttl_timeout` — Minimum delay in seconds before repeating a merge with recompression TTL. Default value: `14400` seconds (4 hours).
@@ -718,6 +719,7 @@ Configuration structure:
         <disk_name_3>
             <path>/mnt/hdd2/clickhouse/</path>
             <keep_free_space_bytes>10485760</keep_free_space_bytes>
+            <disable_merges>true</disable_merges>
         </disk_name_3>
 
         ...
@@ -732,6 +734,7 @@ Tags:
 -   `<disk_name_N>` — Disk name. Names must be different for all disks.
 -   `path` — path under which a server will store data (`data` and `shadow` folders), should be terminated with ‘/’.
 -   `keep_free_space_bytes` — the amount of free disk space to be reserved.
+-   `disable_merges` - Disable background merges for selected disk
 
 The order of the disk definition is not important.
 

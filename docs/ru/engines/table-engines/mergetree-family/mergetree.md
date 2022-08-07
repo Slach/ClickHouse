@@ -626,6 +626,7 @@ TTL d + INTERVAL 1 MONTH GROUP BY k1, k2 SET x = max(x), y = min(y);
         <disk_name_3>
             <path>/mnt/hdd2/clickhouse/</path>
             <keep_free_space_bytes>10485760</keep_free_space_bytes>
+            <disable_merges>true</disable_merges>
         </disk_name_3>
 
         ...
@@ -640,6 +641,7 @@ TTL d + INTERVAL 1 MONTH GROUP BY k1, k2 SET x = max(x), y = min(y);
 -   `<disk_name_N>` — имя диска. Имена должны быть разными для всех дисков.
 -   `path` — путь по которому будут храниться данные сервера (каталоги `data` и `shadow`), должен быть терминирован `/`.
 -   `keep_free_space_bytes` — размер зарезервированного свободного места на диске.
+-   `disable_merges` - Запрет фоновых сияний для заданного диска
 
 Порядок задания дисков не имеет значения.
 
